@@ -1,6 +1,24 @@
 Урок 40. Установка фреймворка
 
-composer create-project --prefer-dist laravel/laravel yourprojectname "5.2.*"
+    composer create-project --prefer-dist laravel/laravel yourprojectname "5.2.*"
 
-OpenServer > Налаштування > Домени > Керування доменами: Ручне + Автопошук > Ім'я домена: land.loc > Папка домена: \land.loc\public > Додати > Зберегти
+    OpenServer > Налаштування > Домени > Керування доменами: Ручне + Автопошук > Ім'я домена: land.loc > Папка домена: \land.loc\public > Додати > Зберегти
+
+Урок 41. Створення таблиць БД
+
+    php artisan make:migration create_table_pages --create=pages створити міграцію і таблицю в БД
+
+    php artisan make:migration create_table_services --create=services
+
+    php artisan make:migration create_table_portfolios --create=portfolios
+
+    php artisan make:migration create_table_peoples --create=peoples
+
+    Фасад Schema використовується для роботи з БД
+
+    up() в міграції - дії при запуску міграції
+
+    down() в міграції - дії при видаленні міграції
+
+    php artisan migrate
 
