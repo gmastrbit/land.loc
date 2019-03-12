@@ -1,0 +1,6 @@
+Урок 40. Установка фреймворка
+
+composer create-project --prefer-dist laravel/laravel yourprojectname "5.2.*"
+
+OpenServer > Налаштування > Домени > Керування доменами: Ручне + Автопошук > Ім'я домена: land.loc > Папка домена: \land.loc\public > Додати > Зберегти
+
