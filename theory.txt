@@ -22,3 +22,7 @@
 
     php artisan migrate
 
+Урок 42. Створення маршрутів
+
+    app > Http > routes.php - маршрутизатор фреймворка
+
