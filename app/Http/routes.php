@@ -23,7 +23,8 @@ Route::group(['middleware' => 'web'], function (){
 });
 
 // адмін-частина
-Route::group(['prefix' => 'admin', 'middleware' => 'auth', function(){
+
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 
     // головна сторінка адмінки
     Route::get('/', function(){
@@ -66,4 +67,4 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', function(){
         Route::match(['get', 'post', 'delete'], '/edit/{service}', ['uses' => 'ServiceEditController@execute', 'as' => 'serviceEdit']);
     });
 
-}]);
+});
