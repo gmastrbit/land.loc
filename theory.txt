@@ -28,4 +28,20 @@
 
 Урок 43. Створення головного контролера і вида
 
+    public > assets > css, fonts, img, js
+
+    {{ asset('assets/js/wow.js') }}
+
+Урок 44. Створення моделей. Вибірка інформації із таблиць БД.
+
+    Макет буде розділений на частини
+
+    php artisan make:model Page - модель для роботи з сторінками
+
+    php artisan make:model Portfolio - модель для роботи з портфоліо
+
+    php artisan make:model Service - модель для роботи з сервісами
+
+    php artisan make:model People - модель для роботи з людьми
+
 
