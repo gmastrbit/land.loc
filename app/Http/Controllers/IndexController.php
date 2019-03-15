@@ -12,6 +12,6 @@ class IndexController extends Controller
     public function execute(Request $request)
     {
 
-        return view('welcome');
+        return view('layouts.site');
     }
 }
