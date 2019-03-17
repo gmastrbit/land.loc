@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use DB;
 use App\Page;
 use App\People;
 use App\Service;
@@ -19,12 +20,16 @@ class IndexController extends Controller
         $pages = Page::all();
         $portfolios = Portfolio::get(['name', 'filter', 'images']);
 //        $portfolios = Portfolio::all();
-        $services = Service::where('id', '<', '20');
-//        $services = Service::all();
+//        $services = Service::where('id', '<', '20');
+        $services = Service::all();
         $peoples = People::take(3)->get();
 //        $peoples = People::all();
 
 //        dd($peoples);
+
+        // унікальна інформація без дублів
+        $tags = DB::table('portfolios')->distinct()->lists('filter');
+//        dd($tags);
 
         $menu = [];
         foreach ($pages as $page) {
@@ -48,7 +53,8 @@ class IndexController extends Controller
             'menu' => $menu,
             'pages' => $pages,
             'services' => $services,
-            'portfolios' => $peoples
+            'portfolios' => $peoples,
+            'tags' => $tags
         ]);
     }
 }
