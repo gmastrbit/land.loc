@@ -12,7 +12,7 @@
 */
 
 // завдяки групі ми визначимо посередників, які будуть використовуватися певних маршрутів
-Route::group(['middleware' => 'web'], function (){
+Route::group([], function (){
 
     // маршрут головної сторінки
     Route::match(['get', 'post'], '/', ['uses' => 'IndexController@execute', 'as' => 'home']);
