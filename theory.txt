@@ -53,3 +53,13 @@
 
 Урок 46. Доопрацювання вигляду головної сторінки
 
+    Виведення всіх робіт портфоліо та співробітників
+
+    return view('site.index', [
+        'menu' => $menu,
+        'pages' => $pages,
+        'services' => $services,
+        'portfolios' => $portfolios,
+        'tags' => $tags,
+        'peoples' => $peoples
+    ]);

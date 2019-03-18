@@ -53,8 +53,9 @@ class IndexController extends Controller
             'menu' => $menu,
             'pages' => $pages,
             'services' => $services,
-            'portfolios' => $peoples,
-            'tags' => $tags
+            'portfolios' => $portfolios,
+            'tags' => $tags,
+            'peoples' => $peoples
         ]);
     }
 }
