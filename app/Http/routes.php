@@ -28,7 +28,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
 
     // головна сторінка адмінки
     Route::get('/', function(){
-
+        if (view()->exists('admin.index')) {
+            $data = ['title' => 'Панель адміністратора'];
+            return view('admin.index', $data);
+        }
     });
 
     // admin/pages
