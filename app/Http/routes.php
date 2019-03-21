@@ -41,7 +41,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
         Route::get('/', ['uses' => 'PagesController@execute', 'as' => 'pages']);
 
         // admin/pages/add
-        Route::match(['get', 'post'], '/add', ['uses' => 'PageAddController@execute', 'as' => 'pagesAdd']);
+        Route::match(['get', 'post'], '/add', ['uses' => 'PagesAddController@execute', 'as' => 'pagesAdd']);
 
         // admin/edit/2
         // uses => PagesEditController@execute - який метод обробить поточний маршрут
