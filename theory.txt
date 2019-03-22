@@ -95,3 +95,11 @@
     // заповнює поля моделі даними, які зберігаються у вигляді масиву
     $page->fill($input);
 
+Урок 52. Форма редагування матеріалу
+
+    // dependency injection - впровадження залежностей
+    public function execute(Page $page, Request $request)
+    замість
+    public function execute($id)
+
+    Виведення сторінки для редагування запису
