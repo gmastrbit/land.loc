@@ -103,3 +103,7 @@
     public function execute($id)
 
     Виведення сторінки для редагування запису
+
+Урок 53. Оновлення інформації в БД
+
+    app > Http > Controllers > PagesEditController@execute обробляє запити типу GET, POST, DELETE
