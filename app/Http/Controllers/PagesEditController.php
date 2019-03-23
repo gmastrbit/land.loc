@@ -17,6 +17,10 @@ class PagesEditController extends Controller
 //        $page = Page::find($id);
 //        dd($page);
 
+        if ($request->isMethod('delete')) {
+            $page->delete();
+            return redirect('admin')->with('status', 'сторінка видалена');
+        }
 
         if ($request->isMethod('post')) {
             // отримаємо всі дані із request крім токена

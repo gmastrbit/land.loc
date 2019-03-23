@@ -107,3 +107,7 @@
 Урок 53. Оновлення інформації в БД
 
     app > Http > Controllers > PagesEditController@execute обробляє запити типу GET, POST, DELETE
+
+Урок 54. Видалення матеріалів. Заключення
+
+    {{ method_field('DELETE') }} == <input type="hidden" name="_method" value="DELETE">
